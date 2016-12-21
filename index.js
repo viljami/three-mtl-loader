@@ -4,14 +4,15 @@
  * @author angelxuanchang
  */
 
-module.exports = function mtlLoaderFactory(THREE){
-  function MTLLoader( manager ) {
+module.exports = function mtlLoaderFactory (THREE){
+
+  THREE.MTLLoader = function MTLLoader (manager){
     this.manager = ! manager ? manager : THREE.DefaultLoadingManager;
-  }
+  };
 
-  THREE.MTLLoader = MTLLoader;
+  Object.assign(THREE.MTLLoader.prototype, THREE.EventDispatcher.prototype, {
 
-  Object.assign(MTLLoader.prototype, THREE.EventDispatcher.prototype, {
+    constructor: THREE.MTLLoader,
 
     /**
      * Loads and parses a MTL asset from a URL.
