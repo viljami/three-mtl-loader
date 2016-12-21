@@ -156,7 +156,7 @@ module.exports = function mtlLoaderFactory (THREE){
 
       }
 
-      var materialCreator = new MTLLoader.MaterialCreator( this.texturePath || this.path, this.materialOptions );
+      var materialCreator = new THREE.MTLLoader.MaterialCreator( this.texturePath || this.path, this.materialOptions );
       materialCreator.setCrossOrigin( this.crossOrigin );
       materialCreator.setManager( this.manager );
       materialCreator.setMaterials( materialsInfo );
@@ -181,7 +181,7 @@ module.exports = function mtlLoaderFactory (THREE){
    * @constructor
    */
 
-  MTLLoader.MaterialCreator = function( baseUrl, options ) {
+  THREE.MTLLoader.MaterialCreator = function( baseUrl, options ) {
 
     this.baseUrl = baseUrl || '';
     this.options = options;
@@ -195,9 +195,9 @@ module.exports = function mtlLoaderFactory (THREE){
 
   };
 
-  MTLLoader.MaterialCreator.prototype = {
+  THREE.MTLLoader.MaterialCreator.prototype = {
 
-    constructor: MTLLoader.MaterialCreator,
+    constructor: THREE.MTLLoader.MaterialCreator,
 
     setCrossOrigin: function ( value ) {
 
