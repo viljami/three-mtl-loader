@@ -9,7 +9,7 @@ The three.js mtl loader as a module
 var THREE = require('three');
 var MTLLoader = require('three-mtl-loader')(THREE);
 var mtlLoader = new MTLLoader();
-mtlLoader.setBaseUrl('/path/to/assets/');
+mtlLoader.setPath('./path/to/assets/');
 mtlLoader.load('model.mtl', function(matl) {
   //do something with matl
 });
