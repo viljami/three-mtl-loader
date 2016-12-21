@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/nascherman/three-mtl-loader#readme",
   "dependencies": {
-    "three": "^0.79.0"
   },
   "devDependencies": {
+    "three": "^0.79.0",
     "budo": "^8.3.0",
     "jser-three-obj-loader": "^1.0.0",
     "path": "^0.12.7",
