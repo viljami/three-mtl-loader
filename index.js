@@ -9,6 +9,8 @@ module.exports = function mtlLoaderFactory(THREE){
     this.manager = ! manager ? manager : THREE.DefaultLoadingManager;
   }
 
+  THREE.MTLLoader = MTLLoader;
+
   Object.assign(MTLLoader.prototype, THREE.EventDispatcher.prototype, {
 
     /**
