@@ -531,5 +531,5 @@ module.exports = function mtlLoaderFactory (THREE){
 
   };
 
-  return MTLLoader;
+  return THREE.MTLLoader;
 };
